@@ -1,5 +1,5 @@
-﻿# Log file path
-$logFile = "C:\temp\network_connections.log"
+# Log file path
+$logFile = "C:\Users\admin\Desktop\network_connections.log"
 
 # Set the interval for monitoring (in seconds)
 $interval = 1
@@ -153,8 +153,6 @@ function Log-NewConnections {
                     }
              }
  
-            #PID of the connection
-            $processId = $connection.OwningProcess
             
             #Logging only external connections.
 
@@ -170,6 +168,12 @@ function Log-NewConnections {
 
 # Continuous monitoring loop
 while ($true) {
+    $apikey = Get-ApiKey
+    if ( $apikey -eq "VT-API-Key"){
+        Add-Content -Path $logFile -Value "Provide Valid VT API key"
+        Write-Output "Provide Valid VT API key"
+        exit -1
+    }
     # Get current connections
     $currentConnections = Get-NetworkConnections
 
