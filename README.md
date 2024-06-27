@@ -19,6 +19,19 @@ VirusTotal API key
 ## Usage
 Open Powershell with admin rights
 
+Change the log file path accordingly
+
+$logFile = "C:\Users\admin\Desktop\network_connections.log"
+
+Replace "VT-API-Key" with VT API key
+
 ```markdown
+function Get-ApiKey {
+    # Replace this with your API key
+    return "VT-API-Key"
+}
+
+
+#Run the file in powershell with admin rights
 $Query_VT_ip_domain.ps1
 
