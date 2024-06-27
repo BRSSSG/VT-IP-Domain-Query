@@ -19,12 +19,6 @@ VirusTotal API key
 ## Usage
 Open Powershell with admin rights
 
-#### Inline Code
-
-Use single backticks for inline code:
-
-
 ```markdown
-To install dependencies, run `npm install`.
-print("Hello World")
+$Query_VT_ip_domain.ps1
 
