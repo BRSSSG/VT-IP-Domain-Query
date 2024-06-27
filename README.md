@@ -23,5 +23,11 @@ Open Powershell with admin rights
 
 Use single backticks for inline code:
 
+#### Inline Code
 
+Use single backticks for inline code:
+
+```markdown
+To install dependencies, run `npm install`.
+print("Hello World")
 To install dependencies, run `npm install`.
